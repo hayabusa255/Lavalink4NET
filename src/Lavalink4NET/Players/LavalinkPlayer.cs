@@ -708,7 +708,8 @@ public class LavalinkPlayer : ILavalinkPlayer, ILavalinkPlayerListener
             VoiceState = new VoiceStateProperties(
                 Token: VoiceServer.Value.Token,
                 Endpoint: VoiceServer.Value.Endpoint,
-                SessionId: VoiceState.SessionId),
+                SessionId: VoiceState.SessionId,
+                ChannelId: VoiceState.VoiceChannelId.ToString()),
         };
 
         var voiceServerName = GetVoiceServerName(VoiceServer.Value);

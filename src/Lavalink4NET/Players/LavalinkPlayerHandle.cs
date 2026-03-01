@@ -199,7 +199,8 @@ internal sealed class LavalinkPlayerHandle<TPlayer, TOptions> : ILavalinkPlayerH
             VoiceState = new VoiceStateProperties(
                 Token: _voiceServer.Value.Token,
                 Endpoint: _voiceServer.Value.Endpoint,
-                SessionId: _voiceState.Value.SessionId!),
+                SessionId: _voiceState.Value.SessionId!,
+                ChannelId: _voiceState.Value.VoiceChannelId!.Value.ToString()),
         };
 
         if (_options.Value.InitialTrack is not null)
